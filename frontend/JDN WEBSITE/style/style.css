@@ -44,7 +44,7 @@ html {
 
        /* shadow*/
     --button-shadow:rgba(149, 157, 165, 0.4) 0px 1.5rem 2.4rem;
-    --section-shadow:rgba(50, 50, 93, 0.25) 0px 0px 8rem -.5rem,
+    --section-shadow:rgba(50, 50, 93, 0.25) 0px 30px 8rem -.5rem,
     rgba(0, 0, 0, 0.3) 0px 0px 1.6rem -.8rem;
 
 
@@ -79,6 +79,10 @@ body{
 
 .white-background{
     background-color:var(--white-color);   
+}
+
+.section-shadow{
+box-shadow: var(--section-shadow);
 }
 
 
@@ -271,7 +275,10 @@ transition: var(--transition-text);
     background-color: var(--sub-color);
     width: 13rem;
     font-weight: var(--font-bold) ;
-    
+}
+
+.new-btn:hover{
+background-color: var(--button-hover);
 }
 
 .new-btn a{
@@ -279,17 +286,7 @@ transition: var(--transition-text);
     padding: 2rem 1rem;
 }
 
-.sticky .new-btn {
-        background-color: var(--white-color);
-}
 
-.sticky .new-btn a{
-    color: var(--text-color);
-}
-
-.sticky .new-btn:hover a{
-    color: var(--white-color);
-}
 
 
 /*title position*/
@@ -300,7 +297,7 @@ width: 100%;
 }
 
 .section-title-left h2{
-color: var(--text-color);
+color: var(--sub-color);
 height: fit-content;
 width: fit-content;
 position: relative;
@@ -314,7 +311,7 @@ right: -3rem;
 transform: translateY(1rem);
     content: '';
 height: .5rem;
-background: var(--text-color);
+background: var(--sub-color);
 width: 200rem;
 display: block;
 }
@@ -331,7 +328,7 @@ justify-content: flex-end;
 
 .section-title-right h2{
 
-color: var(--text-color);
+color: var(--sub-color);
 height: fit-content;
 width: fit-content;
 position: relative;
@@ -346,7 +343,7 @@ padding-bottom: 15rem;
     transform: translateX(-5rem);
     content: '';
 height: .5rem;
-background: var(--text-color);
+background: var(--sub-color);
 width: 100rem;
 display: block;
 }
@@ -782,7 +779,7 @@ transform: translateY(-.5rem;)
     position: relative;
     left: 50%;
     transform: translate(-50%,-60%);
-    color: var(--text-color);
+    color: var(--sub-color);
 }
 .box1 h5{
     font-weight: 500;
@@ -828,20 +825,11 @@ display: block;
 #home-about-jdn{
     background: var(--white-color);
     height: fit-content;
-    box-shadow:   var(--section-shadow);
 }
-
-
 
 #home-about-jdn img{
 width: 100%;
 }
-
-
-
-
-
-
 
 
 
@@ -972,7 +960,6 @@ z-index: -1;
 #map{
     background: var(--white-color);
     height: fit-content;
-    box-shadow: var(--section-shadow);
 
 }
 
@@ -1001,8 +988,12 @@ width: 100%;
     margin-bottom: 5rem;
 }
 
+.map-text{
+width: 40rem;
+}
+
 .map-btn{
-margin-top: 2rem;
+margin-top: 4rem;
 }
 
 #map .find-way{
@@ -1099,10 +1090,6 @@ width: 100%;
 
 /*about- vision*/
 
-
-#about-vision{
-box-shadow:   var(--section-shadow);
-}
 
 .vision-sec{
 margin-bottom: 5rem;
@@ -1265,9 +1252,6 @@ color: var(--text-color);
 margin-bottom: 20rem;
 }
 
-#mission-sec{
-box-shadow: var(--section-shadow);
-}
 
 .mission-img{
 z-index: 2;
@@ -1598,7 +1582,6 @@ padding-bottom: 2rem;
 width: 50%;
 display: flex;
 align-items: center;
-
 }
 .process .col-1 .process-frame{
 width: 47rem;
@@ -1608,11 +1591,93 @@ padding: 2rem;
 box-shadow: var(--button-shadow);
 }
 
-.process-frame .process-img:nth-child(1){
+.process .col-1:nth-child(2){
+position: relative;
+right: 6rem;
+}
+
+
+.process-info h5{
+margin-bottom: 1rem;
+color: var(--main-color);
+}
+
+.process-info h3{
+margin-bottom: 2rem;
+text-align: center;
+}
+
+.process button{
+padding: 3rem;
+margin: 0 2rem;
+}
+
+.process-info{
+width: 34rem;
+display: none;
+
+}
+
+.process-frame{
+display: none;
+
+}
+.process-frame .process-img{
 width: 100%;
 height: 100%;
+background-size: cover;
+background-position: center;
+}
+
+.process-frame:nth-child(1) .process-img{
 background-image: url(../images/default.jpg);
 }
+.process-frame:nth-child(2) .process-img{
+background-image: url(../images/main.jpeg);
+}
+.process-frame:nth-child(3) .process-img{
+background-image: url(../images/default.jpg);
+}
+.process-frame:nth-child(4) .process-img{
+background-image: url(../images/main.jpeg);
+}
+
+.active.right{
+opacity: 1;
+display: block;
+animation: right-show 1s;
+}
+
+.active.left{
+opacity: 1;
+display: block;
+animation: left-show 1s;
+}
+
+@keyframes left-show{
+    0%{
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+
+    100%{
+            opacity: 1;
+        transform: translateX(0);  
+    }
+}
+
+@keyframes right-show{
+    0%{
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+
+    100%{
+            opacity: 1;
+        transform: translateX(0);  
+    }
+}
+
 
 /*--------------------------------visiontrip-page------------------------------------------------------------------------------------------------*/
 
@@ -1629,3 +1694,157 @@ background-image: url(../images/default.jpg);
 height: 72rem;
 }
 /*--------------------------------domitory-page------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------imNew page------------------------------------------------------------------------------------------------*/
+#imNew .content-title-box{
+box-shadow:var(--section-shadow);   
+}
+
+#imNew .mission-line::before{
+height: 38rem;
+}
+
+.imNew-img{
+background-image:url(../images/main.jpeg);
+}
+
+#imNew .notice-title h3{
+text-align: center;
+margin-bottom: 2rem;
+}
+
+#imNew .notice-text{
+visibility: hidden;
+opacity: 0;
+transition: var(--transition-text) ease;
+text-align: center;
+}
+
+#imNew .notice-info{
+padding:1.5rem 2rem;
+    background-color: var(--main-color);
+height: 25%;
+transition: 1s ease;
+}
+
+#imNew .notice-frame:hover .notice-info{
+padding:9rem 1.5rem;
+    background-color: var(--main-color);
+height: 100%;
+transition: var(--transition-text) ease;
+}
+
+#imNew .notice-frame:hover .notice-text{
+ visibility: visible;   
+opacity: 1;
+transition:1s ease;
+}
+
+
+/*--------새가족카드 작성-------*/
+.hidden .new-deco{
+overflow: hidden;
+}
+
+.new-deco{
+height: 74.5rem;
+position: absolute;
+transform: translateY(-32rem);
+z-index: 1;
+font-size: 50rem;
+font-weight: var(--font-bold);
+color: var(--sub-color);
+opacity: .15;
+user-select: none;
+}
+
+.new-deco span:nth-child(1){
+position: relative;
+top: 10rem;
+}
+
+.new-deco span:nth-child(2){
+position: relative;
+bottom: 35rem;
+left: 20%;
+}
+
+.new-deco span:nth-child(3){
+position: relative;
+bottom: 45rem;
+left: 57%;
+}
+
+.new-register{
+z-index: 3;
+color: var(--text-color);
+margin: auto;
+text-align: center;
+}
+
+.new-register p{
+margin: 4rem 0;
+}
+
+/*--------새가족카드 작성-------*/
+
+/*--------------------------------imNew page------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------worship-page------------------------------------------------------------------------------------------------*/
+.worship-sec{
+display: flex;
+width: 100%;
+justify-content: space-between;
+
+}
+.worship-box div{
+z-index: 5;
+display: block;
+position: relative;
+background: #333333;
+width: 400px;
+height: 400px;
+transition: var(--transition-text) ease;
+}
+
+.worship-box div:hover{
+transform: translateY(-2rem);
+transition: var(--transition-text) ease;
+}
+
+.worship-box:hover::before{
+width: 50%;
+transition: var(--transition-text) ease;
+}
+
+.sunday::before{
+content: "";
+width: 20rem;
+height: 35rem;
+background:var(--main-color);
+display: block;
+z-index:1;
+position:absolute;
+left:0;
+transform: translate(-22rem,10rem);
+transition: var(--transition-text) ease;
+}
+
+
+.friday::before{
+  content: "";
+width: 20rem;
+height: 35rem;
+background:var(--main-color);
+display: block;
+z-index:1;
+position:absolute;
+right: 0;
+    transform: translate(22rem,10rem);
+transition: var(--transition-text) ease;
+}
+
+/*--------------------------------worship-page------------------------------------------------------------------------------------------------*/
