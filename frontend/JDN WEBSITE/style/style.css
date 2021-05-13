@@ -1800,17 +1800,18 @@ width: 100%;
 justify-content: space-between;
 
 }
+
 .worship-box div{
 z-index: 5;
 display: block;
 position: relative;
-background: #333333;
-width: 400px;
-height: 400px;
+width: 40rem;
+height: 40rem;
 transition: var(--transition-text) ease;
 }
 
-.worship-box div:hover{
+.worship-box div:hover
+{
 transform: translateY(-2rem);
 transition: var(--transition-text) ease;
 }
@@ -1819,6 +1820,106 @@ transition: var(--transition-text) ease;
 width: 50%;
 transition: var(--transition-text) ease;
 }
+
+.worship-box button{
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.worship-box div>a{
+z-index: 10;
+    height: 100%;
+display: block;
+position: relative;
+}
+
+
+.worship-box:hover button{
+border: 2px solid var(--sub-color);
+background: var(--sub-color);
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.worship-box:hover button:hover{
+position: relative;
+top: 48%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.worship-box .white-button::after {
+position: absolute;
+content: '';
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  width: 0%;
+background: var(--white-color);
+    z-index: -1;
+    transition: var(--transition-text);
+}
+
+.worship-box .white-button:hover a {
+color: var(--white-color);
+}
+
+
+.worship-box .white-button:hover::after {
+position: absolute;
+content: '';
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+background: var(--sub-color);
+    z-index: -1;
+    transition: var(--transition-text);
+}
+
+.sunday div{
+background: rgba(0,0,0,.6);
+background-image: url(../images/default.jpg);
+background-size: cover;
+background-position: center;
+background-blend-mode:hue;
+}
+
+.sunday div:hover{
+background: rgba(0,0,0,0);
+background-image: url(../images/default.jpg);
+background-size: cover;
+background-position: center;
+background-blend-mode:hue;
+box-shadow: var(--section-shadow);
+}
+
+.friday div{
+background: rgba(0,0,0,.6);
+background-image: url(../images/default.jpg);
+background-size: cover;
+background-position: center;
+background-blend-mode:hue;
+}
+
+.friday div:hover{
+background: rgba(0,0,0,0);
+background-image: url(../images/default.jpg);
+background-size: cover;
+background-position: center;
+background-blend-mode:hue;
+box-shadow: var(--section-shadow);
+}
+
+
+
+
+
+
 
 .sunday::before{
 content: "";
@@ -1833,7 +1934,6 @@ transform: translate(-22rem,10rem);
 transition: var(--transition-text) ease;
 }
 
-
 .friday::before{
   content: "";
 width: 20rem;
@@ -1846,5 +1946,7 @@ right: 0;
     transform: translate(22rem,10rem);
 transition: var(--transition-text) ease;
 }
+
+
 
 /*--------------------------------worship-page------------------------------------------------------------------------------------------------*/
