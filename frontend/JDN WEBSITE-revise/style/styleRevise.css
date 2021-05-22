@@ -79,6 +79,7 @@ html {
     font-size:10px;
     font-family: 'Noto Sans KR', sans-serif;
 width: 100vw;
+overflow-x: hidden;
 }
 
 html body{
@@ -151,6 +152,63 @@ font-weight:var(--font-middle) ;
 font-size:   var(--font-button);
 font-weight:var(--font-bold);
 }
+
+
+
+
+/*----------------title----------------*/
+
+
+.section-title-left h2,
+.section-title-right h2{
+color: var(--sub-color);
+height: fit-content;
+width: fit-content;
+position: relative;
+padding-top: 10rem;
+padding-bottom: 15rem;
+}
+
+.section-title-left h2::after{
+    position: absolute;
+right: -3rem;
+transform: translateY(1rem);
+    content: '';
+height: .5rem;
+background: var(--sub-color);
+width: 200rem;
+display: block;
+}
+
+html body .section-title-right{
+transform: translateX(-5rem);
+width: 100vw;
+max-width: 1380px;
+margin: auto;
+display: flex;
+justify-content: flex-end;
+}
+
+.section-title-right h2::after{
+    position:absolute;
+    left: -3rem;
+ transform: translateY(1rem);
+    content: '';
+height: .5rem;
+background: var(--sub-color);
+width: 100rem;
+display: block;
+}
+
+
+@media screen and (max-width: 1200px){
+.section-title-left h2,
+.section-title-right h2{
+padding-top: 2rem;
+padding-bottom: 6rem;
+}
+}
+
 
 /*----------------button----------------*/
 
@@ -451,9 +509,9 @@ opacity: 0;
 width: 15rem;
 position: absolute;
 bottom: 4.5rem;
-visibility: hidden;
 left: 16rem;
 }
+
 
 
 @media screen and (max-width: 1200px){
@@ -485,21 +543,21 @@ height: 100vh;
 background: var(--white-color);
 justify-content: space-between;
 transition: var(--transition-default);
-animation: fadeIn;
-animation-duration: .5s; 
+transform: translateX(100%);
+opacity: 0;
 }    
 
-    .navHide{
-    
-    animation-duration: .5s;
-        transform: translateX(100%);
+.firstLinks.nav-active{
+opacity: 1;
+animation-duration: 1s;
+animation: fadeIn;
+transform: translateX(0%);
 transition: var(--transition-default);
-
     }
     
     
 .nav-link .firstLinks>li{
-padding:1rem 3rem 1rem 3rem;
+padding:0 3rem;
 margin-bottom: 2rem;
 }
 
@@ -509,6 +567,7 @@ color: var(--text-color);
     
     .header .nav-link .main-list>a{
 text-align: center;
+    padding:1rem 0;
     } 
     
     
@@ -546,6 +605,11 @@ padding: 0rem 2rem;
 /*layout*/
 
 
+
+
+
+
+
 /*style*/
 
 .header li a{
@@ -575,11 +639,21 @@ border: .1rem solid rgba( 255, 255, 255, 0.25 );
     transition: .5s;
 }
 
+
+
+.firstLinks .main-list:hover > .secondLinks{
+opacity: 1;
+visibility: visible;
+animation: slideDown .5s ease;
+}
+
 .firstLinks .main-list.onclick > .secondLinks{
 opacity: 1;
 visibility: visible;
 animation: slideDown .5s ease;
 }
+
+
 
 .secondLinks li:hover>a,
 .secondLinks li:hover>span
@@ -598,6 +672,11 @@ border: .1rem solid rgba( 255, 255, 255, 0.5 );
     opacity: 0;
     transition: .5s;
 }
+
+.nav-link .secondLinks:hover .thirdLinks{
+    opacity: 1;
+}
+
 
 .sticky .nav-link .secondLinks .thirdLinks::before{
 width: 100%;
@@ -625,6 +704,11 @@ backdrop-filter: blur( .5rem );
 border: none;
 }
 
+.firstLinks .main-list:hover > .secondLinks{
+opacity: 0;
+visibility: hidden;
+animation: none;
+}    
     
 .firstLinks .main-list.onclick > .secondLinks{
 margin-top: 2rem;
@@ -697,11 +781,11 @@ z-index: -1;
 }
 
 @keyframes fadeIn{
-    0%{
+    from{
         opacity: 0;
     }
 
-    100%{
+    to{
             opacity: 1;
 
     }
@@ -761,7 +845,7 @@ align-items: center;
 
 .burger{
 opacity: 1;
-display: block;
+display:none;
 cursor: pointer;
 margin-left: 2rem;
 }
@@ -774,16 +858,44 @@ margin-left: 2rem;
     background-color: var(--white-color);
 }
 
+    .burger div:nth-child(1){
+    width: 30px;
+
+}
+
     .burger div:nth-child(2){
     width: 25px;
+    
 }
 
 .burger div:nth-child(3){
     width: 30px;
 }
 
+    .burger div:nth-child(1).clicked{
+    width: 30px;
+        transform: rotate(45deg);
+    position: relative;
+top: 1rem;
+}
+
+    .burger div:nth-child(2).clicked{
+    opacity: 0;
+}
+
+.burger div:nth-child(3).clicked{
+    width: 30px;
+ transform: rotate(-45deg);
+position: relative;
+bottom: 1rem;
+}
+
 @media screen and (max-width: 1200px){
-.sticky .burger div{
+    .burger{
+  display: block;      
+    }
+    
+    .sticky .burger div{
     background-color: var(--sub-color);
 }
 }
