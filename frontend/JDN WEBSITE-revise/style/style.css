@@ -1206,7 +1206,6 @@ opacity: 0;
 
 .vision-reveal{
 padding: 4rem 0;
-
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -1222,7 +1221,6 @@ opacity: 0;
 }
 
 .vision-reveal div{
-
 height: 20rem;
 }
 .vision-box:hover .vision-reveal{
@@ -1232,7 +1230,6 @@ opacity: 1;
 }
 .vision-box .inbox{
 height: 5rem;
-
 }
 
 .button1.inbox a{
@@ -1506,12 +1503,9 @@ text-align: right;
 .outreach-frame{
 width: 23.4rem;;
 height: 26.4rem;
-
-
 box-shadow: var(--button-shadow);
-    transition: var(--transition-text);
-    overflow: hidden;
-    
+transition: var(--transition-text);
+overflow: hidden;  
 }
 
 

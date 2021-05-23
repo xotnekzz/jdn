@@ -16,6 +16,7 @@ window.addEventListener('scroll',scrolledBg);
 const navBar = document.querySelector("#nav");
 const screenHeight = window.innerHeight;
 const firstLinks = document.getElementsByClassName("main-list");
+const navLinks = document.querySelectorAll(".main-list");
 
 function reveal(){
 let value = window.scrollY;
@@ -34,26 +35,30 @@ window.addEventListener('scroll',reveal);
 
 
 //모바일 네비게이션//
-
-let mediaQuery = window.matchMedia('(max-width: 1200px)');
-if (mediaQuery.matches) {
-
-
+//네비게이션 열기//
 const burger = document.querySelector(".burger");
 const bar = document.querySelectorAll(".Bbar");
 const mobileNav = document.querySelector(".firstLinks");
 function openNav(){
+//네비게이션 & 버거 에니메이션//
 mobileNav.classList.toggle('nav-active');
 for (let i = 0; i < bar.length; i++) {
     bar[i].classList.toggle('clicked');
 }
+//네비게이션 리스트 슬라이드//    
+navLinks.forEach((link,index)=>{
+if(link.style.animation){
+link.style.animation = '';
+} else{
+link.style.animation = `navFade 0.5s ease forwards ${index/7 + .2}s`;
+}
+});
     
 }
-console.log(bar);
 burger.addEventListener("click", openNav);
 
     
-    
+//네비게이션 2,3레벨 리스트 에니메이션// 
 function openList(event){
 const mainList = event.target.parentElement;
 
@@ -71,5 +76,21 @@ for (let i = 0; i < firstLinks.length; i++) {
 for (let i = 0; i < firstLinks.length; i++) {
     firstLinks[i].addEventListener('click',openList);
 }  
+
+
     
+//네비게이션 클릭시 close Nav//
+const links2 = document.getElementsByClassName("secondLinks");
+const links3 = document.getElementsByClassName("thirdLinks");
+
+function closeNav(){
+mobileNav.classList.remove("nav-active");
+
+for (let i = 0; i < bar.length; i++) {
+    bar[i].classList.remove('clicked');
 }
+}
+
+for (let i = 0; i < links2.length; i++) {
+    links2[i].addEventListener('click',closeNav);
+};
