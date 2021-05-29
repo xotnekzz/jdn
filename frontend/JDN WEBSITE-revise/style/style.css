@@ -2065,7 +2065,6 @@ height: 100%;
 
 .last-worship p{
 color: var(--text-color);
-
 }
 /*--------------------------------worship-page------------------------------------------------------------------------------------------------*/
 
@@ -2122,12 +2121,14 @@ overflow: hidden;
 width: 100%;
 height: auto;
 }
+
 .ministry-title{
 height: 5.5rem;
 background: var(--main-color);
 color: var(--white-color);
 text-align: center;
 }
+
 .ministry-info{
 color: var(--text-color);
 padding-bottom: 2rem;
@@ -2291,8 +2292,7 @@ border-bottom: .5rem solid var(--sub-color);
   box-sizing: border-box;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  resize:none;
-    
+  resize:none; 
 }
 
 #contact .button1{
@@ -2339,7 +2339,6 @@ position: absolute;
 right: 15%;
 transform: translate(10%,-55rem);
    padding: 5rem 0rem;
-
 }
 
       .jb-table {
