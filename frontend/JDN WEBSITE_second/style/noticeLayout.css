@@ -1,0 +1,139 @@
+/*------notice-layout------*/
+/*------notice-layout------*/
+
+
+/* 홈페이지 공지사항*/
+/* 홈페이지 공지사항*/
+
+.notice-layout{
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-column-gap: 4rem !important;
+padding-top: 2rem;
+padding-bottom: 2rem;
+width: 100%;
+justify-content: space-between;
+}
+
+
+.notice-frame{
+position: relative;
+min-height:35rem;
+min-width: 25rem;
+width: 100%;
+margin: auto;
+border: .1rem solid var(--main-color);
+box-shadow: var(--button-shadow);
+transition: var(--transition-default);
+}
+
+.notice-frame:hover{
+transform: translateY(-1.5rem);
+    transition: var(--transition-default);
+}
+
+
+
+.notice-img{
+position: relative;
+width: 100%;
+height: 20rem;
+overflow: hidden;
+}
+
+
+.notice-img img{
+object-fit: cover;
+object-position: center;
+width: 100%;
+height: 100%;
+transform: scale(1);
+    transition: var(--transition-default);
+}
+
+.notice-frame:hover img{
+transform: scale(1.2);
+    transition: var(--transition-default);
+}
+
+.notice-frame .notice-info{
+padding: 1rem 1.5rem;
+position: relative;
+background-color: none;
+min-height: 14.8rem;
+color: var(--white-color);
+color: var(--text-color);
+}
+
+
+.notice-info .notice-title{
+    margin-bottom: 1rem;
+color: var(--main-color);
+}
+
+.notice-frame a{
+position: absolute;
+top: 0;
+}
+
+.notice-frame .inner-button{
+position: absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%,-50%);
+background: var(--sub-color);
+color: var(--white-color);
+width: fit-content;
+padding: 0 3rem;
+height: 5rem;
+opacity: .0;
+    transition: var(--transition-default);
+}
+
+
+.notice-frame:hover .inner-button{
+opacity: .7;
+    transition: var(--transition-default);
+}
+
+
+    
+.notice-frame .inner-button{
+width: 14rem;
+}    
+
+@media screen and (max-width: 1200px){
+.notice-container{
+position: relative;
+right: 2rem;
+width: 100vw;
+overflow-x: auto;
+}
+
+.notice-layout{
+width: fit-content;
+margin: auto;
+}
+
+.notice-frame{
+min-width: 20rem;
+width: 25rem;
+}    
+    
+    .notice-frame:first-child{
+margin-left: 2rem;
+    }
+
+    .notice-frame:last-child{
+margin-right: 2rem;
+    }    
+}
+
+
+/* 홈페이지 공지사항*/
+/* 홈페이지 공지사항*/
+
+/* 공지사항 페이지 */
+/* 공지사항 페이지 */
+
+/* 공지사항 페이지 */
+/* 공지사항 페이지 */

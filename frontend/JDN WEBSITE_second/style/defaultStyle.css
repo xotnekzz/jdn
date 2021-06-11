@@ -1,0 +1,207 @@
+@import url('defaultSetting.css');
+
+/* 여백 & 폰트 & 배경 & 레이아웃 & 버튼스타일 설정입니다 */
+/* 여백 & 폰트 & 배경 & 레이아웃 & 버튼스타일 설정입니다 */
+/* 여백 & 폰트 & 배경 & 레이아웃 & 버튼스타일 설정입니다 */
+
+
+/*  ---   --- --- --- --- --- --- --- --- --- default style --- --- --- ---  ----- --- --- ---  --- --- ---- --- ---*/
+/*  ---   --- --- --- --- --- --- --- --- --- default style --- --- --- ---  ----- --- --- ---  --- --- ---- --- ---*/
+ 
+
+/*----------------entire-page----------------*/
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+
+html {
+font-size:10px;
+width: 100vw;
+overflow-x: hidden;
+}
+
+html body{
+width: 100%;
+    overflow-x: hidden;
+}
+
+.wrapper{
+max-width: 136rem;
+margin: auto;
+padding: 0 2rem;
+}
+
+
+section{
+padding-bottom: 15rem;
+}
+
+ul {
+    list-style: none;
+  }
+
+a{
+      text-decoration: none;
+  }
+
+@media screen and (max-width: 800px){
+    section{
+       padding-bottom: 8rem; 
+    }    
+}
+
+
+
+
+/*----------------대체----------------*/
+.timesection{
+ padding-bottom: 0;   
+}
+/*----------------대체----------------*/
+
+
+
+
+/*----------------backgrond-style ----------------*/
+.gray-background{
+    background-color:var(--background-color);
+}
+
+.white-background{
+    background-color:var(--white-color);   
+}
+
+.section-shadow{
+box-shadow: var(--section-shadow);
+}
+
+/*----------------font-setting ----------------*/
+html {
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1{
+font-size:   var(--font-h1) ;
+}
+h2{
+font-size:   var(--font-h2) ;
+}
+h3{
+    font-size:   var(--font-h3) ;
+    }
+h4{
+font-size:   var(--font-h4) ;
+}
+
+h5{
+  font-size:   var(--font-h5) ;  
+}
+
+p{
+line-height: 2.5rem;
+font-size:   var(--font-p) ;
+font-weight:var(--font-middle) ;
+}
+
+.button-font{
+font-size:var(--font-button);
+font-weight:var(--font-bold);
+}
+
+.main-color-title{
+color: var(--main-color);
+}
+
+
+
+@media screen and (max-width: 800px){
+h1{
+font-size: var(--font-mh1);
+}
+h2{
+font-size:   var(--font-mh2) ;
+}
+h3{
+    font-size:   var(--font-mh3) ;
+    }
+h4{
+font-size:   var(--font-mh4) ;
+}
+
+h5{
+  font-size:   var(--font-mh5) ;  
+}
+
+p{
+line-height: 2.5rem;
+font-size:   var(--font-mp) ;
+font-weight:var(--font-middle) ;
+}
+
+.button-font{
+font-size:   var(--font-mbutton);
+font-weight:var(--font-bold);
+}        
+}
+
+
+/*----------------title-style ----------------*/
+.section-title-left h2,
+.section-title-right h2{
+color: var(--sub-color);
+height: fit-content;
+width: fit-content;
+position: relative;
+padding-top: 10rem;
+padding-bottom: 15rem;
+}
+
+.section-title-left h2::after{
+    position: absolute;
+right: -3rem;
+transform: translateY(1rem);
+    content: '';
+height: .2rem;
+background: var(--sub-color);
+border: .2rem solid var(--sub-color);
+border-radius: 3rem;
+width: 100rem;
+display: block;
+}
+
+html body .section-title-right{
+transform: translateX(-5rem);
+width: 100vw;
+max-width: 1380px;
+margin: auto;
+display: flex;
+justify-content: flex-end;
+}
+
+.section-title-right h2::after{
+    position:absolute;
+    left: -3rem;
+ transform: translateY(1rem);
+    content: '';
+height: .2rem;
+background: var(--sub-color);
+border: .2rem solid var(--sub-color);
+border-radius: 3rem;
+width: 100rem;
+display: block;
+}
+
+
+@media screen and (max-width: 1200px){
+.section-title-left h2,
+.section-title-right h2{
+padding-top: 2rem;
+padding-bottom: 6rem;
+}
+}
+
+/*  ---   --- --- --- --- --- --- --- --- ---default setting --- --- --- ---  ----- --- --- ---  --- --- ---- --- ---*/
+/*  ---   --- --- --- --- --- --- --- --- ---default setting --- --- --- ---  ----- --- --- ---  --- --- ---- --- ---*/

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+/* 기준 단위 & 색상 & 크기 & 그림자 & 전환시간 설정입니다 */
+/* 기준 단위 & 색상 & 크기 & 그림자 & 전환시간 설정입니다 */
+/* 기준 단위 & 색상 & 크기 & 그림자 & 전환시간 설정입니다 */
+
+
+
+:root {
+    /* Color */
+    --white-color: #fff;
+    --background-color:#FCFCFC;
+    --black-color: #1a1a1a;
+    --main-color: #ff7d6e;
+    --sub-color:#14a7d4;
+    --button-hover:rgba( 20, 167, 212, 0.3);
+    --text-color: #0e2f56;
+    --gray-light-color: #f3f3f3;
+    
+    
+    /* Font Size */
+    --font-h1: 7.2rem;
+    --font-h2: 4.8rem;
+    --font-h3: 3.6rem;
+    --font-h4: 2.4rem;
+        --font-h5: 2.2rem;
+    --font-p: 1.8rem;
+    --font-second-link: 1.8rem;
+    --font-third-link: 1.8rem;
+     --font-button: 1.5rem;
+
+    
+    --font-mh1: 5.0rem;
+    --font-mh2: 4.5rem;
+    --font-mh3: 2.8rem;
+    --font-mh4: 1.8rem;
+    --font-mh5: 1.8rem;    
+    --font-mp: 1.5rem;    
+    --font-mbutton: 1.3rem;
+    
+       /* Font weight */
+    --font-middle: 400;
+    --font-bold:600;
+    --font-bold2:800;
+    --font-bolder:900;
+    
+    
+    
+    /* transition duration */
+    --transition-default:.5s ease;
+    --transition-double:1s ease;
+    
+
+    
+       /* shadow*/
+--button-shadow:rgba(149, 157, 165, 0.4) 0px 1.5rem 2rem -1rem;
+--section-shadow:rgba(50, 50, 93, 0.15) 0px 5px 2rem -2rem,
+rgba(0, 0, 0, 0.3) 0px 0px 1.6rem -1rem;
+}
+
+
+
+    

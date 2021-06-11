@@ -1,0 +1,66 @@
+@import url('defaultStyle.css');
+@import url('buttonStyle.css');
+
+/*----------------grid-system----------------*/
+.grid-container{
+display: grid;
+grid-column-gap: 2rem;
+}
+
+/*-middle-col-grid-*/
+
+.middle-grid{
+grid-template-columns: repeat(5,minmax(22rem,25rem));
+grid-column-gap: 2rem;
+justify-content: center;
+}
+
+.middle-2col-grid{
+grid-template-columns: 1fr 4fr 1fr 1fr 4fr 1fr;
+grid-column-gap: 2rem;
+justify-content: center;
+}
+
+.middle-3col-grid{
+grid-template-columns: 1fr 1fr 1fr;
+grid-column-gap: 2rem;
+justify-content: center;
+}
+
+.middle-4col-grid{
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-column-gap: 4rem;
+justify-content: center;
+}
+
+@media screen and (max-width: 1200px){
+    .middle-grid{
+grid-template-columns: repeat(3,minmax(22rem,25rem));
+    grid-row-gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+.middle-3col-grid{
+grid-template-columns: 1fr;
+grid-column-gap: 2rem;
+justify-content: center;
+}
+    
+    .middle-2col-grid{
+grid-template-columns:1fr;
+grid-row-gap: 2rem;
+    }
+    
+    .middle-grid{
+grid-template-columns: repeat(1,minmax(22rem,25rem));
+    grid-row-gap: 4rem;
+    }
+    
+    .hor-scr{
+width: 100vw;
+        justify-content: flex-start;
+        grid-template-columns: repeat(5,minmax(22rem,25rem));
+        overflow-x: auto;
+    }
+}
