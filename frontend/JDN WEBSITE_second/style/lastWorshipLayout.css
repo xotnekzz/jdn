@@ -1,0 +1,92 @@
+/*지난예배*/
+/*지난예배*/
+
+
+
+.last-layout{
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-column-gap: 2rem !important;
+padding-top: 2rem;
+padding-bottom: 2rem;
+width: 100%;
+justify-content: space-between;
+}
+
+
+.last-worship.frame{
+padding: 2rem 2rem;
+position: relative;
+min-height:30rem;
+width: 100%;
+margin: auto;
+box-shadow: var(--button-shadow);
+transition: var(--transition-default);
+}
+
+
+.last-worship .image{
+height:20rem;
+    overflow: hidden;
+
+}
+
+.last-worship .image img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+object-position: center;
+}
+
+#worship h3{
+color: var(--sub-color);
+padding-top: 10rem;
+margin-bottom: 5rem;
+}
+
+.last-worship p{
+color: var(--text-color);
+}
+
+
+@media screen and (max-width: 1200px){    
+.last-container{
+position: relative;
+right: 2rem;
+width: 100vw;
+overflow-x: auto;
+}
+    
+.last-layout{
+width: fit-content;
+margin: auto;
+}
+    
+.last-worship.frame{
+min-height:30rem;
+min-width: 25rem;
+width: fit-content;
+}    
+    
+    .last-worship.frame:first-child{
+margin-left: 2rem;
+    }
+
+    .last-worship.frame:last-child{
+margin-right: 2rem;
+    }    
+}    
+
+#worship h3{
+color: var(--sub-color);
+padding-top: 2rem;
+margin-bottom: 4rem;
+}
+    
+.last-worship p{
+position: relative;
+left: 1rem;
+}    
+}
+
+/*지난예배*/
+/*지난예배*/

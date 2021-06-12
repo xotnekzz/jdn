@@ -9,7 +9,12 @@
     <link rel="icon" href="../images/tab-logo.png" type="image/x-icon">
     
     <!--style/css -->
-    <link rel="stylesheet" href="../style/styleRevise.css">
+    <link rel="stylesheet" href="../style/defaultLayout.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/mainScreen.css">
+    <link rel="stylesheet" href="../style/aside.css">
+    <link rel="stylesheet" href="../style/hot-issue.css">
+
 
 </head>
 
@@ -111,7 +116,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -124,7 +129,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -137,7 +142,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -150,7 +155,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -163,7 +168,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -176,7 +181,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -189,7 +194,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">큼직한 타이틀이 입력될 곳입니다. 글자수 제한을 두면 좋을것 같네요. 30자 제한</div>
+<div class="issue-title">큼직한 타이틀이 입력될 곳입니다. 글자수 제한을 두면 좋을것 같네요. 30자 제한</div>
 <p>자세히<p>
 </div>
 
@@ -202,7 +207,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">강혜수 자매 결혼</div>
+<div class="issue-title">강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -215,7 +220,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -228,7 +233,7 @@
     </div>
 <div class="col-2">
 <div class="title-sec">
-<div class="title">좌태빈 형제 강혜수 자매 결혼</div>
+<div class="issue-title">좌태빈 형제 강혜수 자매 결혼</div>
 <p>자세히<p>
 </div>
 
@@ -278,8 +283,7 @@
     
 const issueTitle = document.getElementsByClassName("title-sec");
 const issueNavList = document.getElementsByClassName("issue-nav-item");    
-    
-console.log(issueNavList);    
+       
 for(i=0; i<issueNavList.length;i++){
 issueNavList[i].addEventListener("click",function(event){
 for(i=0; i<issueNavList.length;i++){
@@ -303,7 +307,17 @@ event.target.parentNode.parentNode.classList.toggle("active");
     };
 
 })
-}    
+}; 
+    
+const title = document.getElementsByClassName("issue-title");
+function titleWidth(){
+for(i=0;i<title.length;i++){
+title[i].style.maxWidth = window.innerWidth - 150 + 'px';
+}
+}
+
+window.addEventListener("resize",titleWidth);
+
     </script>
     </body>
 </html>

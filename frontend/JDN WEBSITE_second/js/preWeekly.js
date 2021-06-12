@@ -16,12 +16,6 @@ event.target.parentNode.classList.toggle("clicked");
 })
 }
 
-
-
-
-if(screen.width>=1200){
-document.write(`<script src='../js/weekly.js'></script>`);
-}else{
 window.onload = function () {
     $('.target')
         .append('<div class="photo"></div>')
@@ -29,4 +23,3 @@ window.onload = function () {
             'background-image': 'url(' + $('.target').attr('data-image') + ')'
         })
     };
-}

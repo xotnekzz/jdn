@@ -10,7 +10,13 @@
     <link rel="icon" href="../images/tab-logo.png" type="image/x-icon">
     
     <!--style/css -->
-    <link rel="stylesheet" href="../style/styleRevise.css">
+    <link rel="stylesheet" href="../style/defaultLayout.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/mainScreen.css">
+    <link rel="stylesheet" href="../style/aside.css">
+    <link rel="stylesheet" href="../style/lastWorshipLayout.css">
+    <link rel="stylesheet" href="../style/weeklyPaperLayout.css">
+    <link rel="stylesheet" href="../style/liveWorship.css">
 
 </head>
 
@@ -80,7 +86,7 @@
                 </div>
         </div>
             </div>
-    <div class="bg sunday-worship">
+    <div class="bg live-worship">
        <div>
        <div class="live"><span>라이브</span> 방송 중</div>
         <div class="streaming">
@@ -89,28 +95,33 @@
    </div>
     
     <main id="worship">
-    <section class="gray-background">
+    <section class="white-background">
         <div class="wrapper">
             <div class="section-title-left weekly-title">
-                <h2>주일 예배</h2>
+                <h2>주일 청년예배</h2>
             </div>
  <div class="grid-container middle-grid weekly-container">
     <div class="weekly">
-     <div class="target" data-scale="1.5" data-image="../images/weekly.jpg"><a href="../images/weekly.JPG" target="_blank"></a></div>
-         <div class="target" data-scale="1.5" data-image="../images/weekly.jpg"></div>
-        <div class="target" data-scale="1.5" data-image="../images/weekly.jpg"></div>
-        <div class="target" data-scale="1.5" data-image="../images/weekly.jpg"></div>
+     <div class="target"><a href="../images/paper1.JPG" target="_blank"><img src="../images/paper1.JPG"></a>
+        </div>
+     <div class="target"><a href="../images/paper2.JPG" target="_blank"><img src="../images/paper2.JPG"></a>
+        </div>
+     <div class="target"><a href="../images/paper3.JPG" target="_blank"><img src="../images/paper3.JPG"></a>
+        </div>
+     <div class="target"><a href="../images/paper4.JPG" target="_blank"><img src="../images/paper4.JPG"></a>
+        </div>
      </div>
 </div>
             </div>
         </section>
-        <section class="white-background section-shadow">
-                    <div class="wrapper last-worship">
+        
+        <section class="gray-background section-shadow">
+<div class="wrapper">
             <div class="section-title-left">
                 <h3>최근설교 다시보기</h3>
             </div>
-             <div class="grid-container middle-grid hor-scr">
-        
+                 <div class="last-container">
+                <div class="grid-container last-layout">
             <div class="last-worship frame">
             <a href="#">
             <div class="image">
@@ -175,8 +186,9 @@
                  
                         </div>
             </div>
+            </div>
         </section>
-    </main>
+     </main>
 <aside class="go-to-contact">
      <section id="go-to-contact">
           <div class="wrapper">
@@ -207,8 +219,5 @@
 </footer>
 
 <script src="../js/header.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../js/preWeekly.js">
-</script> 
     </body>
 </html>

@@ -1,0 +1,91 @@
+/*------------live-worship-page-------------*/
+/*------------live-worship-page-------------*/
+/*------------live-worship-page-------------*/
+/*메인화면*/
+.live-worship{
+background: var(--background-color);
+height: 80rem;
+}
+
+@media screen and (max-width: 1200px){
+   .live-worship{
+height: 60rem;
+} 
+}
+
+@media screen and (max-width: 800px){
+   .live-worship{
+height: 45rem;
+}    
+}
+
+/*네비게이션 및 스트리밍*/
+#worship-streaming .header>div{
+background: var(--white-color);
+padding: 0rem 6rem;
+}
+
+#worship-streaming .firstLinks a{
+color:var(--text-color);
+}
+
+#worship-streaming #mainWhiteLogo{
+display: none;    
+}
+#worship-streaming #coloredLogo{
+display: block;
+}
+
+#worship-streaming .burger div{
+border: .2rem solid var(--sub-color);
+background: var(--sub-color);
+}
+
+.live-worship div{
+margin: auto;
+margin-bottom: 0;
+}
+
+.live-worship .live{
+color: var(--text-color);
+margin-bottom: 2rem;
+font-size: var(--font-h4);
+font-weight: var(--font-bold);
+}
+
+.live-worship .live span{
+color: var(--main-color);
+}
+
+.live-worship .streaming{
+background:black;
+width: 1080px;
+height: 600px;
+}
+
+@media screen and (max-width: 1200px){
+.live-worship .streaming{
+background:black;
+width: 95vw;
+height: 44rem;
+}    
+}
+@media screen and (max-width: 800px){
+
+#worship-streaming .header>div{
+background: var(--white-color);
+padding: 0rem 2rem;
+}
+    
+
+.live-worship .streaming{
+background:black;
+width: 95vw;
+height: 30rem;
+}   
+}
+
+
+/*------------live-worship-page-------------*/
+/*------------live-worship-page-------------*/
+/*------------live-worship-page-------------*/

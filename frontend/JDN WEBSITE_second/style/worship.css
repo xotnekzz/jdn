@@ -1,0 +1,147 @@
+
+/*--------------------worship-page-------------------*/
+/*--------------------worship-page-------------------*/
+/*--------------------worship-page-------------------*/
+
+/*온라인예배*/
+.worship-box{
+z-index: 5;
+display: block;
+position: relative;
+width: 40rem;
+height: 40rem;
+transition: var(--transition-default);    
+}
+
+.sunday{  
+grid-column: 2;
+}
+
+.friday{
+grid-column: 5;
+}
+
+.worship-box img{
+width: 100%;
+height: 100%;
+transition: var(--transition-default); 
+}
+
+.worship-box div{
+position: absolute;
+top: 0;
+left: 0;
+background: rgba(0,0,0,.6);
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: var(--transition-default);  
+}
+
+.worship-box:hover div{
+background: rgba(0,0,0,0);
+transition: var(--transition-default);
+}
+
+.worship-box:hover img,
+.worship-box:hover div{
+transform: translateY(-2rem);
+transition: var(--transition-default);  
+}
+
+
+
+.worship-box:hover button{
+border: 2px solid var(--sub-color);
+background: var(--sub-color);
+}
+
+.worship-box .white-button:hover::after {
+position: absolute;
+content: '';
+  height: 100%;
+  width: 100%;
+background: var(--sub-color);
+    z-index: -1;
+transition: var(--transition-default);
+}
+
+.worship-box .white-button:hover a {
+color: var(--white-color);
+}
+
+.sunday::before{
+content: "";
+width: 0;
+height: 35rem;
+background:var(--main-color);
+display: block;
+z-index:-1;
+position:absolute;
+top: 10rem;
+transform: translateX(-50rem);
+transition: var(--transition-default);
+}
+
+.friday::before{
+  content: "";
+width: 0;
+height: 35rem;
+background:var(--main-color);
+display: block;
+z-index:-1;
+position:absolute;
+right: 0;
+top: 10rem;
+transform: translateX(50rem);
+transition: var(--transition-default);
+}
+
+.worship-box:hover::before{
+width: 80rem;
+transition: var(--transition-default);
+}
+
+@media screen and (max-width: 1200px){
+.worship-box{
+width: 35rem;
+height: 35rem;   
+}
+
+.worship-box::before{
+height: 30rem;
+top: 8rem;
+} 
+}
+
+@media screen and (max-width: 800px){
+.sunday{  
+grid-column: 1;
+}
+
+.friday{
+grid-column: 1;
+}
+
+.worship-box{
+width: 25rem;
+height: 25rem; 
+margin: auto;
+margin-bottom: 4rem;
+}
+
+.worship-box::before{
+height: 20rem;
+top: 6rem;
+} 
+    .sunday::before{
+transform: translateX(-60rem);
+    }  
+    
+    .friday::before{
+transform: translateX(60rem);
+    }  
+}
+

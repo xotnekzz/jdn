@@ -1,0 +1,124 @@
+/* outreach intro */
+.outreach .ministry-line::before{
+content: "";
+top: 5rem;
+height: 70%;
+right: -4rem;
+}
+
+@media screen and (max-width: 1200px){
+.outreach .ministry-line::before{
+content: "";
+top: 5rem;
+height: 82%;
+}    
+}
+
+@media screen and (max-width: 800px){
+.outreach .ministry-line::before{
+content: "";
+top: -50%;
+left: 0;
+height: 65%;
+}
+}
+
+
+
+/* outreach interview */
+.personal-interview{
+padding: 20rem 0;
+width: 100%;
+margin: auto;
+height: fit-content;
+    background:var(--sub-color);
+    background-image: url(../images/aboutBg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.personal-interview p{
+color: var(--white-color);
+width: 70rem;
+margin: auto;
+}
+
+.personal-interview .person-info{
+margin-top: 2rem;
+text-align: right;
+}
+
+@media screen and (max-width: 800px){
+.personal-interview{
+padding: 8rem 0;
+}
+    
+.personal-interview p{
+color: var(--white-color);
+width: 100%;
+padding: 0 2rem;
+margin: auto;
+}    
+}
+
+
+
+/* outreach activity */
+.outreach-frame{
+width: 90%;
+height: 26rem;
+box-shadow: var(--button-shadow);
+    transition: var(--transition-default);
+overflow: hidden;  
+}
+
+.outreach-frame:hover{
+
+transform: translateY(-1.5rem);
+    transition: var(--transition-default);
+}
+
+.outreach-frame .outreach-list{
+height: 100%;
+width: 100%;
+}
+
+.outreach-frame .outreach-list-img{
+position: relative;
+background-image: url(../images/default.jpg);
+background-size:cover;
+background-position: center;
+height: 100%;
+width: 100%;
+transform: scale(1);
+    transition: var(--transition-default);
+
+}
+
+.outreach-frame:hover .outreach-list-img{
+
+transform: scale(1.2);
+}
+
+.outreach-frame .outreach-list .outreach-list-info{
+position: relative;
+top: 1px;
+transform: translateY(-100%);
+    background-color: var(--main-color);
+height: 25%;
+color: var(--white-color);
+text-align: center;
+}
+
+.outreach-list-info .outreach-list-title{
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 800px){
+    .outreach .hor-scr{
+    height: 31rem;
+        align-content: center;
+    }    
+}

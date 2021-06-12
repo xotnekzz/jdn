@@ -1,0 +1,81 @@
+
+/*------------last-worship-page-------------*/
+/*------------last-worship-page-------------*/
+/*------------last-worship-page-------------*/
+
+.last-worship h2{
+padding-bottom: 10rem;
+}
+
+.last-worship .info{
+margin-top: 1rem;
+}
+.select-box{
+text-align: right;
+padding: 2rem;
+margin-bottom: 2rem;
+}
+
+.select-box select{
+font-size: var(--font-button);
+font-weight: var(--font-middle);
+width: 12rem;
+padding: 1rem;
+background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+border: 1px solid var(--sub-color);
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+outline: none;
+}
+
+
+@media screen and (max-width: 1200px){
+.last-worship h2{
+padding-bottom: 4rem;
+}
+
+    .last-worship .middle-grid{
+grid-template-columns: 1fr 1fr;
+max-width: 60vw;
+width: 100%;
+margin: auto;
+    }    
+
+.last-worship.frame{
+padding: 2rem 2rem;
+position: relative;
+min-height:30rem;
+max-width:30rem;
+margin: auto;
+box-shadow: var(--button-shadow);
+transition: var(--transition-default);
+}    
+    
+    .last-worship.frame:first-child{
+margin-left: 0rem;
+margin: auto;
+ }
+
+    .last-worship.frame:last-child{
+margin-right: 0rem;
+margin: auto;
+    }     
+}
+
+@media screen and (max-width: 800px){
+.last-worship .middle-grid{
+grid-template-columns: 1fr;
+max-width: 100%;
+width: 100%;
+margin: auto;
+grid-row-gap: 1rem;
+    }        
+}
+
+/*------------last-worship-page-------------*/
+/*------------last-worship-page-------------*/
+/*------------last-worship-page-------------*/
+
+

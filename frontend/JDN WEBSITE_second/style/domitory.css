@@ -1,0 +1,241 @@
+
+/*--------------------domitory-page-------------------*/
+/*--------------------domitory-page-------------------*/
+/*--------------------domitory-page-------------------*/ 
+
+/* domitory intro */
+/* domitory intro */
+.domitory .ministry-line::before{
+content: "";
+top: 5rem;
+height: 65%;
+}
+
+@media screen and (max-width: 1200px){
+.domitory .ministry-line::before{
+content: "";
+top: 25%;
+right: -2rem;
+height: 65%;
+}    
+}
+
+@media screen and (max-width: 800px){
+.domitory .ministry-line::before{
+content: "";
+top: -50%;
+right: 0rem;
+left: 0rem;
+height: 65%;
+}
+    
+}
+
+/* domitory- what to do */
+.dom-info{
+position: relative;
+}
+
+.domitory.info{
+padding: 4rem 0;
+box-shadow: var(--button-shadow);
+}
+
+.domitory.info img{
+padding: 0 2rem;
+width:100%;
+}
+
+.domitory.info .text-box{
+padding: 0 2rem;
+color: var(--text-color);
+margin-top: 2rem;
+}
+
+.domitory.info h3{
+text-align: center;
+color: var(--main-color);
+margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 800px){
+    .domitory.info{
+display: flex;
+    flex-direction: column;
+align-items: center;
+margin-bottom: 6rem;
+    }
+    .domitory.info img{
+padding: 0 2rem;
+min-width: 30rem;
+        width:50%;
+}
+    
+.domitory.info .text-box{
+padding: 0 2rem;
+color: var(--text-color);
+margin-top: 2rem;
+max-width: 30rem;    
+    
+}
+    
+}
+
+/* domitory-info */
+/* domitory-info */
+.col-1.dom-info:nth-child(1){
+grid-column: 2/4;
+grid-row: 1;
+}
+
+.col-1.dom-info:nth-child(2){
+grid-column: 5/8;
+grid-row: 1;
+}
+
+
+.dom-info .img:nth-child(1){
+position: absolute;
+top: -10rem;
+width: 130%;
+height: 65vh;
+overflow: hidden;
+left: 5rem;
+box-shadow: var(--button-shadow);
+}
+
+.dom-info .img:nth-child(2){
+ position: relative;
+top: 15rem;
+width: 90%;
+height: 45vh;
+overflow: hidden;
+box-shadow: var(--button-shadow);
+}
+
+.dom-info .info-text{
+color: var(--text-color);
+margin-bottom: 2rem;
+}
+.dom-info .info-text h4{
+margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 800px){
+.col-1.dom-info:nth-child(1){
+grid-column: 1;
+grid-row: 2;
+margin: auto;
+}
+
+.col-1.dom-info:nth-child(2){
+grid-column: 1;
+grid-row: 1;
+margin: auto;
+}
+
+
+.dom-info .img:nth-child(1){
+display: none;
+}
+
+.dom-info .img:nth-child(2){
+ position: relative;
+top: 0rem;
+width: 100%;
+max-width: 50rem;
+height: 45vh;
+overflow: hidden;
+box-shadow: var(--button-shadow);
+}    
+ 
+.dom-info .img:nth-child(2) img{
+object-fit: cover;
+object-position: center;
+width: 100%;
+height: 100%;
+
+
+}   
+    
+}
+
+/* domitory-doc */
+
+.domitory.doc{
+height: fit-content;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.doc .icon{
+width: 15rem;
+height: 15rem;
+margin-bottom: 2rem;
+
+}
+
+.domitory.doc:last-child{
+grid-column: 1/7;
+height: 20rem;
+}
+
+.domitory.doc:last-child p{
+font-size: var(--font-h4);
+line-height: 3.5rem;
+color: var(--sub-color);
+margin-top: 4rem;
+}
+.ministry .inbox{
+height: fit-content;
+position: absolute;
+bottom: 0;
+}
+
+.button1.inbox a{
+text-align: center;
+    color: var(--white-color);
+    display: block;
+    padding: 1rem 2rem;
+    width: 12rem;
+}
+
+.white-button.inbox:hover a{
+color: var(--text-color);
+}
+
+@media screen and (max-width: 1200px){
+
+.domitory.doc:last-child{
+grid-column: 3;
+height: 20rem;
+}
+
+.domitory.doc:last-child p{
+font-size: var(--font-p);
+line-height:2.5rem;
+margin-top: 4rem;
+}
+.ministry .inbox{
+height: fit-content;
+position: absolute;
+bottom: 0;
+}
+}
+
+@media screen and (max-width: 800px){
+.domitory.doc:last-child{
+grid-column: 2;
+}
+    .ministry .middle-grid{
+grid-template-columns: 1fr 1fr;
+}           
+}
+
+/*--------------------domitory-page-------------------*/
+/*--------------------domitory-page-------------------*/
+/*--------------------domitory-page-------------------*/ 

@@ -9,7 +9,11 @@
     <link rel="icon" href="../images/tab-logo.png" type="image/x-icon">
     
     <!--style/css -->
-    <link rel="stylesheet" href="../style/styleRevise.css">
+    <link rel="stylesheet" href="../style/defaultLayout.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/mainScreen.css">
+    <link rel="stylesheet" href="../style/aside.css">
+    <link rel="stylesheet" href="../style/request.css">
 
 </head>
 
@@ -86,7 +90,7 @@
     </div>
    
     <main id="request" class="prayer">
-       <section class="white-background">
+       <section class="gray-background">
 <div class="wrapper">
          <div class="grid-container middle-2col-grid">
              <div class="col-1 format">
@@ -101,13 +105,19 @@
     <input type="text" name="contactNum" placeholder="010-xxxx-xxxx" required onkeypress="return onlyNumberKey(event)" >
 
     <input type="text" name="address" placeholder="dream@forest.com">
+    
     <div class="ask-for">
-    <p>* 정확한 답변을 위해 목적을 선택해주세요.</p>
+    <p>공개 희망여부<span> *( 비공개 시, 담당목사님께만 공개됩니다. )</span></p>
     <div>
-   <label><input type="checkbox" name="for" value="문의" class="cbox" checked> 문의</label>
-    <label><input type="checkbox" name="for" value="핫이슈"  class="cbox"> 핫이슈 게시글</label>
-    <label><input type="checkbox" name="for" value="새신자"  class="cbox"> 새신자</label>
-    <label><input type="checkbox" name="for" value="기타"  class="cbox"> 기타</label>
+   <label><input type="checkbox" name="open" class="open-prayer cbox" value="공개"> 공개
+<select name="range" class="openRange">
+    <option value="">공개범위</option>
+    <option value="간사">~ 간사</option>
+    <option value="리더">~ 리더</option>
+    <option value="리더">~ 전체</option>
+</select>       
+        </label>
+    <label><input type="checkbox" name="close" value="비공개"  class="close-prayer cbox" checked> 비공개</label>
     </div>
 </div>
     <textarea name="text-input" placeholder="내용을 입력해주세요." style="height:200px" required></textarea>
@@ -152,26 +162,55 @@
 </footer>
 <script src="../js/header.js"></script>
 <script>
+    
+    
 const cbox = document.getElementsByClassName('cbox');
+const openPrayer = document.querySelector(".open-prayer");
+const openRange = document.querySelector(".openRange");    
     
 function check(event){
-for(i=0; i< cbox.length;i++){
+/* 체크박스 중복 방지 */
+for(i=0; i< cbox.length;i++){    
 cbox[i].checked = false;
 }
 event.target.checked = true;
-}    
-for(i=0; i< cbox.length;i++){
-    cbox[i].addEventListener('click',check)};
 
+/* 공개범위 열기 */    
+if(event.target.checked = openPrayer.checked){
+openRange.classList.add("show-range");
+}
+else if(event.target.checked =! openPrayer.checked){
+openRange.classList.remove("show-range");
+}    
+}
+
+    
+    
+function init(){
+check(event);
+}    
+    
+for(i=0; i< cbox.length;i++){
+    cbox[i].addEventListener('click',init)};
+
+    
+    
+    
+/* 전화번호 텍스트 방지 only 숫자만 */    
 function onlyNumberKey(evt){
   let charCode = (evt.which) ? evt.which : event.keyCode;
  console.log(charCode);
     if (charCode != 46 && charCode != 45 && charCode > 31
     && (charCode < 48 || charCode > 57))
      return false;
-
   return true;
 }
-</script>
+    
+    
+
+    
+    </script>
+    
+    
     </body>
 </html>

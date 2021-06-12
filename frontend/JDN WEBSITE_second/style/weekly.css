@@ -1,0 +1,231 @@
+/*------------weekly-page-------------*/
+/*------------weekly-page-------------*/
+/*------------weekly-page-------------*/
+
+/*레이아웃*/
+.weekly-grid{
+position: relative;
+width: 100%;
+}
+
+.weekly-category{
+z-index: 5;
+position: relative;
+grid-column: 1;
+width: 70%;
+margin-top: 2rem;
+font-size: var(--font-p);
+color: var(--text-color);
+}
+
+.weekly-lists{
+grid-column: 2;
+}
+
+.weekly-container{
+grid-column: 3/6;
+margin-top: 4rem;
+}
+
+@media screen and (max-width: 1200px){
+.category{
+z-index: 5;
+position: relative;
+grid-column: 1/7;
+grid-row: 1;
+width: 100%;
+}
+    
+.weekly-lists{
+grid-column: 1;
+}
+
+.weekly-container{
+grid-column: 2/7;
+margin-top: 4rem;
+} 
+}
+@media screen and (max-width: 800px){
+    .weekly-container{
+    grid-column: 1/7;
+grid-row: 2;
+    }
+.weekly-lists{
+grid-column: 1/7;
+max-width: 25rem;
+margin: auto;
+grid-row: 3;
+}
+}
+
+
+
+
+/*목록*/
+
+.category{
+position: relative;
+display: block;
+z-index: 100;
+border: .1rem solid var(--main-color);
+padding: 2rem;
+width: 100%;
+background: var(--main-color);
+}
+
+.weekly-category{
+height: 100%;
+width: 100%;
+}
+
+.category h4{
+color: var(--main-color);
+color: white;
+width: 80%;
+
+}
+
+.weekly-category img{
+z-index: -1;
+height: 2.0em;
+filter: invert();
+transition: var(--transition-default);
+}
+
+
+.weekly-years{
+transition: .1s;
+}
+
+.weekly-years li {
+
+visibility: hidden;
+height: 0px;
+list-style:inside;
+padding: 0 2rem;
+opacity: 0;
+transition: var(--transition-default);
+}
+
+.first-list{
+width: 100%;
+position: relative;
+color: white;
+}
+.first-list.clicked .weekly-years li{
+height: 3rem;
+visibility: visible;
+opacity: 1;
+transition: var(--transition-default);
+}
+
+.first-list.clicked img{
+transform: rotate(180deg);
+transition: var(--transition-default);
+}
+
+
+.first-list> div{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+@media screen and (max-width: 1200px){
+    .category{
+    height: 20rem;
+    padding: 1rem;
+    } 
+    
+    .weekly-category{
+    display: block;
+    width: 100%;
+    justify-content: space-around;
+    }
+    
+.category .weekly-years{
+    position: absolute;
+width: 100%;
+height: fit-content;
+background: var(--white-color);
+box-shadow: var(--section-shadow);
+    display: flex;
+    flex-wrap: wrap;
+justify-content: space-between;
+    }
+    
+    .first-list .weekly-years li{
+    height: 0;
+    opacity: 0;
+        color: var(--text-color);
+       list-style: none;
+  min-width: 12.3rem;
+width: 100%;
+max-width: 10rem;
+       height: 0rem;
+    text-align: center;
+    background: white;
+    }  
+    
+    .first-list.clicked .weekly-years li{
+       height: 4rem;
+  min-width: 12.3rem;
+width: 100%;
+max-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        opacity: 1;
+    transition: var(--transition-default);
+    }
+}
+
+
+@media screen and (max-width: 800px){
+     .first-list .weekly-years li{
+  min-width: 10rem;
+width: 100%;
+max-width: 10rem;
+    }  
+    
+    .first-list.clicked .weekly-years li{
+  min-width: 10rem;
+width: 100%;
+max-width: 10rem;
+    }   
+}
+/*주보 월별 리스트*/
+
+
+.weekly-box{
+width: 20rem;
+height: 16rem;
+margin: auto;
+margin-bottom: 2rem;
+
+}
+
+.weekly-box img{
+width: 100%;
+height: 80%;
+object-fit: cover;
+object-position: top;
+box-shadow: var(--section-shadow);
+}
+
+.weekly-box p{
+    text-align: center;
+color: var(--text-color);
+}
+
+
+
+/*주보*/
+.weekly{
+box-shadow: var(--section-shadow);
+}
+
+/*------------weekly-page-------------*/
+/*------------weekly-page-------------*/
+/*------------weekly-page-------------*/

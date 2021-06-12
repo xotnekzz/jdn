@@ -2092,7 +2092,7 @@ position: relative;
 .ministry .intro .content-title-box{
 position: relative;
 width: 100%;
-left: 2rem;
+left: -2rem;
 color: var(--text-color);
 }
 
@@ -2126,12 +2126,21 @@ top: 5rem;
 height: 65%;
 }
 
+@media screen and (max-width: 1200px){
+.domitory .ministry-line::before{
+content: "";
+top: 25%;
+right: -2rem;
+height: 65%;
+}    
+}
 
 @media screen and (max-width: 800px){
 .domitory .ministry-line::before{
 content: "";
 top: -50%;
-right: 0;
+right: 0rem;
+left: 0rem;
 height: 65%;
 }
     
@@ -3722,6 +3731,12 @@ width:95%;
 /*------------request-page-------------*/
 /*------------request-page-------------*/
 /*------------request-page-------------*/
+
+p span{
+font-size: 1.2rem;
+}
+
+
 
 #request .middle-2col-grid{
 grid-template-columns: 1fr;

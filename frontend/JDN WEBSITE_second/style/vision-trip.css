@@ -1,0 +1,24 @@
+/* outreach intro */
+.visiontrip .ministry-line::before{
+content: "";
+top: 5rem;
+height: 60%;
+right: -4rem;
+}
+
+@media screen and (max-width: 1200px){
+.visiontrip .ministry-line::before{
+content: "";
+top: 5rem;
+height: 65%;
+}    
+}
+
+@media screen and (max-width: 800px){
+.visiontrip .ministry-line::before{
+content: "";
+top: -50%;
+left: 0;
+height: 65%;
+}
+}
