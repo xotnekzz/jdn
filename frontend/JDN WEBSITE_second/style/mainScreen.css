@@ -6,10 +6,17 @@
 display: flex;
 position: relative;
 top: 0;
-height: 100vh;
+height: 75vh;
 width: 100vw;
 background-size: cover;
 }
+
+.bg.index{
+height: 100vh;
+
+}
+
+
 
 .bg .main-screen{
 display: flex;
@@ -66,6 +73,40 @@ background-image: url(../images/aboutBg.jpg);
  background-image: url(../images/aboutBg.jpg);   
 }
 
+.prayerBg{
+ background-image: url(../images/prayer-bg.jpg);   
+}
+
+.songBg{
+ background-image: url(../images/songbg.jpg);   
+}
+
+.serveBg{
+ background-image: url(../images/serveBg.jpg);   
+}
+
+.worshipBg{
+ background-image: url(../images/worshipbg.JPG);   
+}
+.latestBg{
+ background-image: url(../images/latest-worship.jpg);   
+}
+.hotissueBg{
+ background-image: url(../images/hot-issue.jpg);   
+}
+
+.contactBg{
+ background-image: url(../images/contact.jpg);   
+}
+
+.outreachBg{
+ background-image: url(../images/serve2.jpg);   
+}
+
+.noticeBg{
+ background-image: url(../images/notice.jpg); 
+background-position: 0% 40% !important; 
+}
 /*style*/
 
 
@@ -74,6 +115,24 @@ background-image: url(../images/aboutBg.jpg);
 .bg{
 height: 680px;
 }
+    
+.homeBg{
+background-position: 60% 0px !important; 
+} 
+    
+.worshipBg{
+background-position: 70% 0px !important;  
+} 
+    
+.noticeBg{
+background-position: 0% 50% !important; 
+}     
+}
+
+@media screen and (max-width: 800px){
+.noticeBg{
+background-position: 50% 0px !important; 
+}     
 }
 
 /*----------------main-screen(first screen)---------------*/

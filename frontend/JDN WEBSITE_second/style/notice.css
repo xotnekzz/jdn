@@ -24,7 +24,7 @@ margin: auto;
 
     #notice .notice-layout{
 grid-template-columns: 1fr;
-grid-row-gap: 1rem;
+grid-row-gap: 4rem;
 width: 100%;
     }    
 
