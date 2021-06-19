@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-REACT_PATH=./jdn-web
+REACT_PATH=./jdn-react
 
 $REACT_PATH/node_modules
 $REACT_PATH/pnp
