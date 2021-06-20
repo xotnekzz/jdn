@@ -7,5 +7,5 @@ git pull
 
 pip install -r /var/www/jdn/backend/config/requirements.txt
 
-cd backend
+cd backend/app
 uvicorn app.main:app --host 0.0.0.0 --reload --port 80
