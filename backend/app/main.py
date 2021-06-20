@@ -7,4 +7,4 @@ app.include_router(api_router)
 
 @app.get("/")
 async def root():
-	return RedirectResponse("https://127.0.0.1/docs")
+	return RedirectResponse("http://127.0.0.1/docs")
