@@ -19,7 +19,12 @@ def get_db():
 
 router = APIRouter()
 
-@router.get("/", response_model=List[schemas.Worship])
+@router.get("/worships", response_model=List[schemas.Worship])
+def read_worships(db: Session = Depends(get_db)):
+    worships = db.query(models.Worship).all()
+    return worships
+
+@router.get("/worship", response_model=List[schemas.Worship])
 def read_worships(db: Session = Depends(get_db)):
     worships = db.query(models.Worship).all()
     return worships
